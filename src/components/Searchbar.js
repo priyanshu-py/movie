@@ -13,7 +13,7 @@ export default function Searchbar({ parsedData , setParsedData }) {
         let url = `http://www.omdbapi.com/?s=${searchKey}&apikey=a95c91f0`;
         let data = await fetch(url);
         let parsedDataFromApi = await data.json()
-        setParsedData(parsedDataFromApi);
+        setParsedData(parsedDataFromApi.Search);
         console.log('data extracted from api ')        
     }
 
