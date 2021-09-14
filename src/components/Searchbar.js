@@ -15,6 +15,7 @@ export default function Searchbar({ parsedData , setParsedData }) {
         let parsedDataFromApi = await data.json()
         setParsedData(parsedDataFromApi.results);
         console.log(parsedDataFromApi)        
+
     }
 
     return (
