@@ -5,7 +5,7 @@ import Movies from './components/Movies';
 
 function App() {
 
-  const [parsedData, setParsedData] = useState('')
+  const [parsedData, setParsedData] = useState([])
   console.log('data passed from app.js')
 
   return (

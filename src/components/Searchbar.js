@@ -10,11 +10,11 @@ export default function Searchbar({ parsedData , setParsedData }) {
     }
 
     const takingMoviesFromApi =  async () =>{
-        let url = `http://www.omdbapi.com/?s=${searchKey}&apikey=a95c91f0`;
+        let url = `https://api.themoviedb.org/3/search/movie?api_key=31748a6a43ef527e0b309f13191b40eb&query=${searchKey.split(' ').join('+')}`;
         let data = await fetch(url);
         let parsedDataFromApi = await data.json()
-        setParsedData(parsedDataFromApi);
-        console.log('data extracted from api ')        
+        setParsedData(parsedDataFromApi.results);
+        console.log(parsedDataFromApi)        
     }
 
     return (

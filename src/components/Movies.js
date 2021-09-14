@@ -84,14 +84,14 @@ export default function Movies({parsedData}) {
     return (
         <div className="MoviesSectionCustomCSS container-fluid">
             <div className="row mt-4">
-                {movies.map((details)=>{
+                {parsedData.map((details)=>{
                     return(
                         <div className="col-md-3">
 
                             <Movieitem 
-                            image={details.Poster}
-                            year={details.Year}
-                            movieName={details.Title}
+                            image={details.poster_path}
+                            year={details.release_date}
+                            movieName={details.original_title}
                             />
                             
                             </div>
